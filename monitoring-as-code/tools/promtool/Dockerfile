@@ -7,7 +7,7 @@ RUN VERSION=$(curl -Ls https://api.github.com/repos/prometheus/prometheus/releas
      | tar xvzf - "prometheus-$VERSION.linux-amd64"/promtool --strip-components=1 && cp promtool /go/bin/promtool
 
 
-FROM alpine:3.16.2 AS runner
+FROM alpine:3.16.5 AS runner
 
 COPY --from=builder /go/bin/promtool /usr/local/bin
 
