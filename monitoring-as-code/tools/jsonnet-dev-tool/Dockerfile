@@ -15,7 +15,7 @@ RUN jb init
 RUN jb install https://github.com/grafana/grafonnet-lib/grafonnet
 RUN jb install https://github.com/grafana/jsonnet-libs/grafana-builder
 
-FROM alpine:3.16.2 AS runner
+FROM alpine:3 AS runner
 
 COPY --from=builder /go/bin/jsonnetfmt /usr/local/bin
 COPY --from=builder /go/bin/jsonnet-lint /usr/local/bin
