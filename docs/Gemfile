@@ -12,4 +12,4 @@ gem 'tzinfo-data', platforms: [:mswin, :mingw, :x64_mingw, :jruby]
 gem "haml", "~> 5.0" 
 gem "middleman-core", "4.4.3"
 # Include the tech docs gem
-gem 'govuk_tech_docs'
+gem 'govuk_tech_docs', '>= 3.3.1'
